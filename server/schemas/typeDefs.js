@@ -1,8 +1,7 @@
 const typeDefs = `
   type User {
     _id: ID
-    firstName: String
-    lastName: String
+    username: String
     email: String
     password: String
     responses: Survey!
@@ -13,12 +12,12 @@ const typeDefs = `
     firstName: String
     lastName: String
     course: String
-    rating:Number
+    rating:Float
     favoritePart:String
     leastFavorite: String
     takeaway: String
-    rateTeacher: Number
-    applicable: Number
+    rateTeacher: Float
+    applicable: Float
     createdAt: String
    
   }
@@ -28,27 +27,31 @@ const typeDefs = `
     firstName: String
     lastName: String
     course: String
-    rating:Number
+    rating:Float
     favoritePart:String
     leastFavorite: String
     takeaway: String
-    rateTeacher: Number
-    applicable: Number
+    rateTeacher: Float
+    applicable: Float
   
   }
-
+  type Auth {
+    token:ID
+    user: User
+  
+  }
   type Query {
     users: [User]
     user(username: String!): User
-    thoughts(username: String): [Thought]
-    thought(thoughtId: ID!): Thought
+    surveys(username: String): [Survey]
+    survey(surveyId: ID!): Survey
     me: User
   }
-
+  
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
-    submitSurvey(Survey:Surveyinput) : Survey 
+    submitSurvey(survey:Surveyinput) : Survey 
   }
 `;
 

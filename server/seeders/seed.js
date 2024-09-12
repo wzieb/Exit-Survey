@@ -1,18 +1,18 @@
 const db = require('../config/connection');
-const { User, Thought } = require('../models');
+const { User, Survey } = require('../models');
 const userSeeds = require('./userSeeds.json');
 const surveySeeds = require('./surveySeeds.json');
 const cleanDB = require('./cleanDB');
 
 db.once('open', async () => {
   try {
-    await cleanDB('Thought', 'thoughts');
+    await cleanDB('Survey', 'surveys'); //second one is 'collection' name. may need to come back and fix this. 
     await cleanDB('User', 'users');
 
     await User.create(userSeeds);
 
     for (let i = 0; i < surveySeeds.length; i++) {
-      const { _id, thoughtAuthor } = await Thought.create(surveySeeds[i]);
+      const { _id, thoughtAuthor } = await Survey.create(surveySeeds[i]);
       const user = await User.findOneAndUpdate(
         { username: thoughtAuthor },
         {
