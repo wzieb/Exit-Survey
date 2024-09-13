@@ -3,10 +3,10 @@ import { useQuery } from '@apollo/client';
 
 import SurveyForm from '../components/SurveyForm';
 
-import { QUERY_THOUGHTS } from '../utils/queries';
+import { QUERY_USER } from '../utils/queries';
 
 const Home = () => {
-  const { loading, data } = useQuery(QUERY_SURVEY);
+  const { loading, data } = useQuery(QUERY_USER);
   const survey = data?.survey || [];
 
   return (

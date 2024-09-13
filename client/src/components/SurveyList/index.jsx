@@ -12,9 +12,10 @@ const SurveyList = ({
   return (
     <div>
       {showQuestion && <h3>{question}</h3>}
-      {reponses &&
+      {
+        reponses &&
         responses.map((response) => (
-          <div key={response._id} className="card mb-3"> ))}
+          <div key={response._id} className="card mb-3">
 
             <h4 className="card-header bg-primary text-light p-2 m-0">
               <Link
@@ -27,7 +28,9 @@ const SurveyList = ({
               </Link>
             </h4>
           </div>
-    </div>
+        ))
+      }
+    </div >
   )
 }
-export default ThoughtList;
+export default SurveyList;
