@@ -24,7 +24,7 @@ const Footer = () => {
           >
             ❤️
           </span>{' '}
-          by the Survey team.
+          by Will, Sam, and Leigh.
         </h4>
       </div>
     </footer>
