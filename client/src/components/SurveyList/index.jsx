@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-const ThoughtList = ({
+const SurveyList = ({
   thoughts,
   title,
   showTitle = true,
