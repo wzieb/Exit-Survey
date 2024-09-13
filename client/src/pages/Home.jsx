@@ -1,13 +1,13 @@
 import { useQuery } from '@apollo/client';
 
-import ThoughtList from '../components/SurveyList';
-import ThoughtForm from '../components/SurveyForm';
+
+import SurveyForm from '../components/SurveyForm';
 
 import { QUERY_THOUGHTS } from '../utils/queries';
 
 const Home = () => {
-  const { loading, data } = useQuery(QUERY_THOUGHTS);
-  const thoughts = data?.thoughts || [];
+  const { loading, data } = useQuery(QUERY_SURVEY);
+  const survey = data?.survey || [];
 
   return (
     <main>
@@ -17,16 +17,6 @@ const Home = () => {
           style={{ border: '1px dotted #1a1a1a' }}
         >
           <SurveyForm />
-        </div>
-        <div className="col-12 col-md-8 mb-3">
-          {loading ? (
-            <div>Loading...</div>
-          ) : (
-            <SurveyList
-              thoughts={thoughts}
-              title="Some Feed for Thought(s)..."
-            />
-          )}
         </div>
       </div>
     </main>

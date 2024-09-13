@@ -8,7 +8,7 @@ import { useMutation } from '@apollo/client';
 import Auth from '../../utils/auth';
 
 const SurveyForm = () => {
-  const [thoughtText, setThoughtText] = useState('');
+  const [responseText, setResponseText] = useState('');
 
   const [characterCount, setCharacterCount] = useState(0);
 
@@ -27,7 +27,7 @@ const SurveyForm = () => {
     try {
       const { data } = await addResponse({
         variables: {
-          thoughtText,
+          responseText,
           // Run the getProfile() method to get access to the unencrypted token value in order to retrieve the user's username 
           surveyAuthor: Auth.getProfile().authenticatedPerson.username
         },
@@ -50,7 +50,7 @@ const SurveyForm = () => {
 
   return (
     <div>
-      <h3>What did you think?</h3>
+      <h3>What did you think of your course and instructor?</h3>
 
       {Auth.loggedIn() ? (
         <>
