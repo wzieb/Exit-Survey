@@ -12,9 +12,9 @@ db.once('open', async () => {
     await User.create(userSeeds);
 
     for (let i = 0; i < surveySeeds.length; i++) {
-      const { _id, thoughtAuthor } = await Survey.create(surveySeeds[i]);
+      const { _id, username } = await Survey.create(surveySeeds[i]);
       const user = await User.findOneAndUpdate(
-        { username: thoughtAuthor },
+        { username: username },
         {
           $addToSet: {
             thoughts: _id,

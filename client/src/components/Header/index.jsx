@@ -21,7 +21,7 @@ const Header = () => {
             <>
               <Link className="btn btn-lg btn-info m-2" to="/me">
                 {/* Run the getProfile() method to get access to the unencrypted token value in order to retrieve the user's username  */}
-                {Auth.getProfile().authenticatedPerson.username}'s profile
+                {Auth.getSurveyList().authenticatedPerson.username} profile
               </Link>
               <button className="btn btn-lg btn-light m-2" onClick={logout}>
                 Logout
