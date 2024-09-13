@@ -75,24 +75,27 @@ const SurveyForm = () => {
             onSubmit={handleFormSubmit}
           >
             <div className="col-12 col-lg-9">
+              <p>First Name</p>
               <textarea
                 name="responseText"
                 value={firstName}
                 className="form-input w-100"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
                 onChange={(e)=>setFirstName(e.target.value)}
-              >First name</textarea>
+              ></textarea>
             </div>
             <div className="col-12 col-lg-9">
+              <p>Last Name</p>
               <textarea
                 name="responseText"
                 value={lastName}
                 className="form-input w-100"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
                 onChange={(e)=>setLastName(e.target.value)}
-              >Last name</textarea>
+              ></textarea>
             </div>
             <div className="col-12 col-lg-9">
+              <p>Select Your Class</p>
               <select
                 name="responseText"
                 value={course}
@@ -103,6 +106,7 @@ const SurveyForm = () => {
               </select>
             </div>
             <div className="col-12 col-lg-9">
+              <p>On a scale of 1-5, how would you rate this class, 5 being the best?</p>
               <select
                 name="responseText"
                 value={rating}
@@ -112,6 +116,7 @@ const SurveyForm = () => {
               >On a scale of 1-5, how would you rate this class, 5 being the best?<option value="rating1">1</option><option value="rating2">2</option><option value="rating3">3</option><option value="rating4">4</option><option value="rating5">5</option></select>
             </div>
             <div className="col-12 col-lg-9">
+              <p>What was your favorite part about the class?</p>
               <textarea
                 name="responseText"
                 placeholder="Share your thoughts..."
@@ -122,6 +127,7 @@ const SurveyForm = () => {
               >What was your favorite part about the class?</textarea>
             </div>
             <div className="col-12 col-lg-9">
+              <p>What did you not like about the class?</p>
               <textarea
                 name="responseText"
                 placeholder="Share your thoughts..."
@@ -132,6 +138,7 @@ const SurveyForm = () => {
               >What did you not like about the class?</textarea>
             </div>
             <div className="col-12 col-lg-9">
+              <p>What are you taking away from this class?</p>
               <textarea
                 name="responseText"
                 placeholder="Share your thoughts..."
@@ -142,6 +149,7 @@ const SurveyForm = () => {
               >What are you taking away from this class?</textarea>
             </div>
             <div className="col-12 col-lg-9">
+              <p>How would you rate your teacher?</p>
               <select
                 name="responseText"
                 value={rateTeacher}
@@ -151,6 +159,7 @@ const SurveyForm = () => {
               >How would you rate your teacher?<option value="rateTeacher1">1</option>1<option value="rateTeacher2">2</option>2<option value="rateTeacher3">3</option>3<option value="rateTeacher4">4</option>4<option value="rateTeacher5">5</option>5</select>
             </div>
             <div className="col-12 col-lg-9">
+              <p>How applicable was this course’s content to your future endeavor?</p>
               <textarea
                 name="responseText"
                 placeholder="Share your thoughts..."
