@@ -64,7 +64,6 @@ const SurveyForm = () => {
             <div className="col-12 col-lg-9">
               <textarea
                 name="responseText"
-                placeholder="Maximum 100 characters..."
                 value={firstName}
                 className="form-input w-100"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
@@ -74,7 +73,6 @@ const SurveyForm = () => {
             <div className="col-12 col-lg-9">
               <textarea
                 name="responseText"
-                placeholder="Maximum 100 characters..."
                 value={lastName}
                 className="form-input w-100"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
@@ -103,7 +101,7 @@ const SurveyForm = () => {
             <div className="col-12 col-lg-9">
               <textarea
                 name="responseText"
-                placeholder="Maximum 280 characters..."
+                placeholder="Share your thoughts..."
                 value={favoritePart}
                 className="form-input w-100"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
@@ -113,7 +111,7 @@ const SurveyForm = () => {
             <div className="col-12 col-lg-9">
               <textarea
                 name="responseText"
-                placeholder="Maximum 280 characters..."
+                placeholder="Share your thoughts..."
                 value={leastFavorite}
                 className="form-input w-100"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
@@ -123,7 +121,7 @@ const SurveyForm = () => {
             <div className="col-12 col-lg-9">
               <textarea
                 name="responseText"
-                placeholder="Maximum 280 characters..."
+                placeholder="Share your thoughts..."
                 value={takeaway}
                 className="form-input w-100"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
@@ -142,7 +140,7 @@ const SurveyForm = () => {
             <div className="col-12 col-lg-9">
               <textarea
                 name="responseText"
-                placeholder="Maximum 280 characters..."
+                placeholder="Share your thoughts..."
                 value={applicable}
                 className="form-input w-100"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
