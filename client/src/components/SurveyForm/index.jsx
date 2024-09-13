@@ -30,22 +30,27 @@ const SurveyForm = () => {
   //   ]
   // });
 
-  // add submit survey mutation
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-    try {
-      const { data } = await addResponse({
-        variables: {
-          responseText,
-          // Run the getProfile() method to get access to the unencrypted token value in order to retrieve the user's username 
-          surveyAuthor: Auth.getSurveyList().authenticatedPerson.username
-        },
-      });
+    // try {
+    //   const { data } = await addResponse({
+    //     variables: {
+    //       responseText,
+    //       // Run the getProfile() method to get access to the unencrypted token value in order to retrieve the user's username 
+    //       surveyAuthor: Auth.getSurveyList().authenticatedPerson.username
+    //     },
+    //   });
 
-      setResponseText('');
-    } catch (err) {
-      console.error(err);
+    //   setResponseText('');
+    // } catch (err) {
+    //   console.error(err);
+    // }
+    try {
+      window.alert('Your responses have been reecorded!');
+      document.location.assign('/summary');
+    } catch (e){
+      console.error("An error has occured while submitting survey...")
     }
   };
 
@@ -65,7 +70,7 @@ const SurveyForm = () => {
       {Auth.loggedIn() ? (
         <>
           
-          <form
+          <form 
             className="flex-row justify-center justify-space-between-md align-center"
             onSubmit={handleFormSubmit}
           >

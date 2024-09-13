@@ -15,8 +15,20 @@ export const QUERY_USER = gql`
     }
   }
 `;
-
-// export const QUERY_THOUGHTS = gql`
+export const QUERY_RESPONSES = gql`  query user($username: String!) {
+    user(username: $username) {
+      username
+      course
+      rating
+      favoritePart
+      leastFavorite
+      takeaway
+      rateTeacher
+      applicable
+      createdAt
+    }
+  }`
+//export const QUERY_THOUGHTS = gql`
 //   query getThoughts {
 //     thoughts {
 //       _id
