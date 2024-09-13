@@ -1,18 +1,17 @@
 import { Link } from 'react-router-dom';
 
 const SurveyList = ({
-  thoughts,
-  title,
-  showTitle = true,
+  responses,
+  question,
   showUsername = true,
 }) => {
-  if (!thoughts.length) {
+  if (!responses.length) {
     return <h3>No Thoughts Yet</h3>;
   }
 
   return (
     <div>
-      {showTitle && <h3>{title}</h3>}
+      {showQuestion && <h3>{title}</h3>}
       {thoughts &&
         thoughts.map((thought) => (
           <div key={thought._id} className="card mb-3">

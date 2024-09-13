@@ -68,40 +68,41 @@ const SurveyForm = () => {
             <div className="col-12 col-lg-9">
               <textarea
                 name="responseText"
-                placeholder="Maximum 280 characters..."
+                placeholder="Maximum 100 characters..."
                 value={firstName}
                 className="form-input w-100"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
                 onChange={handleChange}
-              >"First name"</textarea>
+              >First name</textarea>
             </div>
             <div className="col-12 col-lg-9">
               <textarea
                 name="responseText"
-                placeholder="Maximum 280 characters..."
+                placeholder="Maximum 100 characters..."
                 value={lastName}
                 className="form-input w-100"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
                 onChange={handleChange}
-              >"Last name"</textarea>
+              >Last name</textarea>
             </div>
             <div className="col-12 col-lg-9">
-              <textarea
+              <select
                 name="responseText"
                 value={course}
                 className="form-input w-100"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
                 onChange={handleChange}
-              >"Select your class"</textarea>
+              >Select your class<option value="course101">Course 101</option><option value="course102">Course 102</option><option value="course103">Course 103</option><option value="course201">Course 201</option><option value="course202">Course 202</option>
+              </select>
             </div>
             <div className="col-12 col-lg-9">
-              <textarea
+              <select
                 name="responseText"
                 value={rating}
                 className="form-input w-100"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
                 onChange={handleChange}
-              >"On a scale of 1-5, how would you rate this class?"</textarea>
+              >On a scale of 1-5, how would you rate this class, 5 being the best?<option value="rating1">1</option><option value="rating2">2</option><option value="rating3">3</option><option value="rating4">4</option><option value="rating5">5</option></select>
             </div>
             <div className="col-12 col-lg-9">
               <textarea
@@ -111,7 +112,7 @@ const SurveyForm = () => {
                 className="form-input w-100"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
                 onChange={handleChange}
-              >"What was your favorite part about the class?"</textarea>
+              >What was your favorite part about the class?</textarea>
             </div>
             <div className="col-12 col-lg-9">
               <textarea
@@ -121,7 +122,7 @@ const SurveyForm = () => {
                 className="form-input w-100"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
                 onChange={handleChange}
-              >"What did you not like about the class?"</textarea>
+              >What did you not like about the class?</textarea>
             </div>
             <div className="col-12 col-lg-9">
               <textarea
@@ -131,16 +132,16 @@ const SurveyForm = () => {
                 className="form-input w-100"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
                 onChange={handleChange}
-              >"What are you taking away from this class?"</textarea>
+              >What are you taking away from this class?</textarea>
             </div>
             <div className="col-12 col-lg-9">
-              <textarea
+              <select
                 name="responseText"
                 value={rateTeacher}
                 className="form-input w-100"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
                 onChange={handleChange}
-              >"How would you rate your teacher?"</textarea>
+              >How would you rate your teacher?<option value="rateTeacher1">1</option>1<option value="rateTeacher2">2</option>2<option value="rateTeacher3">3</option>3<option value="rateTeacher4">4</option>4<option value="rateTeacher5">5</option>5</select>
             </div>
             <div className="col-12 col-lg-9">
               <textarea
@@ -150,12 +151,12 @@ const SurveyForm = () => {
                 className="form-input w-100"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
                 onChange={handleChange}
-              >"How applicable was this course’s content to your future endeavor?"</textarea>
+              >How applicable was this course’s content to your future endeavor?</textarea>
             </div>
 
             <div className="col-12 col-lg-3">
               <button className="btn btn-primary btn-block py-3" type="submit">
-                "Submit"
+                Submit
               </button>
             </div>
             {error && (
