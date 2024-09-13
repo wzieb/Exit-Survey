@@ -19,14 +19,12 @@ const SurveyForm = () => {
   const [takeaway, setTakeaway] = useState('');
   const [rateTeacher, setRateTeacher] = useState('');
   const [applicable, setApplicable] = useState('');
-
-  // const [addThought, { error }] = useMutation
-  // (ADD_THOUGHT, {
+  // const [submitSurvey] = useState('');
+  // const [submitSurvey, { error }] = useMutation
+  // (SUBMIT_SURVEY, {
   //   refetchQueries: [
-  //     QUERY_THOUGHTS,
-  //     'getThoughts',
-  //     QUERY_ME,
-  //     'me'
+  //     QUERY_USER,
+  //     'getResponses',
   //   ]
   // });
 
