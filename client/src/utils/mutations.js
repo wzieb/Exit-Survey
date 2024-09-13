@@ -24,17 +24,33 @@ export const ADD_USER = gql`
   }
 `;
 
-export const ADD_RESPONSE = gql`
-  mutation addThought($responseText: String!) {
-    addResponse(thoughtText: $responseText) {
-      _id
-      responseText
-      username
-      createdAt
-      comments {
-        _id
-        commentText
-      }
-    }
+// export const ADD_THOUGHT = gql`
+//   mutation addThought($thoughtText: String!) {
+//     addThought(thoughtText: $thoughtText) {
+//       _id
+//       thoughtText
+//       thoughtAuthor
+//       createdAt
+//       comments {
+//         _id
+//         commentText
+//       }
+//     }
+//   }
+// `;
+export const SUBMIT_SURVEY = gql`
+mutation SubmitSurvey($survey: Surveyinput) {
+  submitSurvey(survey: $survey) {
+    _id
+    applicable
+    course
+    createdAt
+    favoritePart
+    firstName
+    lastName
+    leastFavorite
+    rateTeacher
+    rating
+    takeaway
   }
-`;
+}`
