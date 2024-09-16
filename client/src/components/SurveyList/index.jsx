@@ -9,28 +9,28 @@ const SurveyList = ({
     return <h3>No responses yet</h3>;
   }
 
-  return (
-    <div>
-      {/* {showQuestion && <h3>{question}</h3>} */}
-      {
-        responses &&
-        
-          <div key={responses._id} className="card mb-3">
+  console.log(responses);
 
-            <h4 className="card-header bg-primary text-light p-2 m-0">
-              <Link
-                className="text-light"
-                to={`/profiles/${responses.username}`}
-              >
-                <span style={{ fontSize: '1rem' }}>
-                  You gave these responses on {responses.createdAt}
-                </span>
-              </Link>
-            </h4>
-          </div>
-        
-      }
-    </div >
+  return (
+    <main>
+      <div>
+
+        <h4>Your responses:</h4>
+
+        <p>Applicable: {responses.applicable}</p>
+        <p>Course: {responses.course}</p>
+        <p>Created at: {responses.createdAt}</p>
+        <p>Favorite part: {responses.favoritePart}</p>
+        <p>First name: {responses.firstName}</p>
+        <p>Last name: {responses.lastName}</p>
+        <p>Least favorite: {responses.leastFavorite}</p>
+        <p>Rate teacher: {responses.rateTeacher}</p>
+        <p>Rating: {responses.rating}</p>
+        <p>Takeaway: {responses.takeaway}</p>
+
+      </div>
+    </main>
   )
 }
-export default SurveyList;
+
+export default SurveyList
