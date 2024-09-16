@@ -14,7 +14,7 @@ const Surveyschema = new Schema({
   },
   course: {
     type: String,
-    enum: ['Class 101'],
+    enum: ['Class 101'], // @@TODO: This only allows one class; more?
   },
   rating:{
     type: Number,
