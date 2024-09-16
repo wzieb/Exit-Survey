@@ -56,18 +56,24 @@ export const QUERY_RESPONSES = gql`  query user($username: String!) {
 //   }
 // `;
 
-// export const QUERY_ME = gql`
-//   query me {
-//     me {
-//       _id
-//       username
-//       email
-//       thoughts {
-//         _id
-//         thoughtText
-//         thoughtAuthor
-//         createdAt
-//       }
-//     }
-//   }
-// `;
+export const QUERY_ME = gql`
+query Summary {
+  me {
+    username
+    _id
+    responses {
+      _id
+      firstName
+      lastName
+      course
+      rating
+      favoritePart
+      leastFavorite
+      takeaway
+      rateTeacher
+      applicable
+      createdAt
+    }
+  }
+}
+`;
