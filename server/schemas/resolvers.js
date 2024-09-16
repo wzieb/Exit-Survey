@@ -4,10 +4,10 @@ const { signToken, AuthenticationError } = require('../utils/auth');
 const resolvers = {
   Query: {
     users: async () => {
-      return User.find().populate('Survey');
+      return User.find().populate('responses');
     },
     user: async (parent, { username }) => {
-      return User.findOne({ username }).populate('surveys'); //collection name, orignally 'thoughts' 
+      return User.findOne({ username }).populate('responses'); //collection name, orignally 'thoughts' 
     },
     surveys: async (parent, { username }) => {
       const params = username ? { username } : {};
@@ -18,7 +18,7 @@ const resolvers = {
     },
     me: async (parent, args, context) => {
       if (context.user) {
-        return User.findOne({ _id: context.user._id }).populate('surveys');//collection name, orignally 'thoughts' 
+        return User.findOne({ _id: context.user._id }).populate('responses');//collection name, orignally 'thoughts' 
       }
       throw AuthenticationError;
     },
@@ -48,8 +48,14 @@ const resolvers = {
       return { token, user };
     },
 
-    submitSurvey: async (parent, {survey}) => {
+    submitSurvey: async (parent, {survey}, context) => {
+      console.log(survey, context);
       const surveyResponse = await Survey.create({...survey})
+      await User.findByIdAndUpdate(context.user._id, 
+        { responses: surveyResponse._id },
+        { new: true }
+
+      );
       return surveyResponse
     },
 
