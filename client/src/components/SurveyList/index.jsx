@@ -23,6 +23,7 @@ const SurveyList = ({
                 to={`/profiles/${responses.username}`}
               >
                 <span style={{ fontSize: '1rem' }}>
+                 
                   You gave these responses on {responses.createdAt}
                 </span>
               </Link>
